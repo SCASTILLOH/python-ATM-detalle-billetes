@@ -5,9 +5,10 @@ class Cajero:
         
         
         self.billetes = [
-            {'type': 'billete20', 'quantity': 0, 'value_type': 20000, 'saldo': 0},
-            {'type': 'billete10', 'quantity': 0, 'value_type': 10000, 'saldo': 0},
-            {'type': 'billete5', 'quantity': 0, 'value_type': 5000, 'saldo': 0},
+            {'type': 'billete20000', 'quantity': 0, 'value_type': 20000, 'saldo': 0},
+            {'type': 'billete10000', 'quantity': 0, 'value_type': 10000, 'saldo': 0},
+            {'type': 'billete5000', 'quantity': 0, 'value_type': 5000, 'saldo': 0},
+            {'type': 'billete1000', 'quantity': 0, 'value_type': 1000, 'saldo': 0},
         ]
     
     def imprime_ticket_carga_billetes(self, **kwargs):
@@ -67,15 +68,15 @@ class Cajero:
             else:
                 print('Saldo insuficiente para giros.')
 
-cajero = Cajero(billete_minimo=5000)
+cajero = Cajero(billete_minimo=1000)
 print()
-cajero.carga_billetes(billete20=4, billete10=2, billete5=3)
+cajero.carga_billetes(billete20000=4, billete10000=2, billete5000=3, billete1000=90)
 print()
 cajero.saldo()
 print()
 cajero.giro(50000)
 print()
-cajero.giro(65000)
+cajero.giro(67000)
 print()
 
 
