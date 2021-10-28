@@ -55,6 +55,7 @@ class Cajero:
                         monto_solicitado -= self.billetes_valor[billete]
                         self.billetes_stock[billete] -= 1
                         d[billete]['monto_girado'] += self.billetes_valor[billete]
+                        
                     transaccion.append(d)
                 
                 total_girado = 0
